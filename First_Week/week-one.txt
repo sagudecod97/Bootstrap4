@@ -1,0 +1,82 @@
+--------- Bootstrap Grid System ------------
+
+* Viewport:
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    The Viewport meta-tag:
+        - Ensures that the screen width is set to the device width, and the content is rendered
+          with this in mind
+        - Desigining the websites to be responsive of the size of the viewport
+
+
+* Bootstrap Grid:
+    Design to be:
+        - Responsive
+        - Mobile First
+        - Fluid
+ 
+        
+* CSS Flexbox layout:
+    - Simpler and flexible layouts options in CSS.
+    - Can easily handle dynamic/unknown size of content containers
+    - Direction-agnostic layout
+
+
+** Bootstrap Grid **
+
+    Outer container that sets the size of the layout: <div class="container">
+
+    The contant will be layout in the form of rows: <div class="row">
+    So, each row in Bootstrap wil be divided into 12 equal sized columns.
+
+    Bootstrap makes available 5 classes:
+        - 'default' targets all screen sizes from extra small to extra large
+        - 'sm' for small
+        - 'md' for medium
+        - 'lg' for large
+        - 'xl' for extra large screen sizes
+
+    Use the classes .col-*, .col-sm-*, col-md-* ... for defining the layouts for various screen sizes
+
+    Specify how many columns each piece of content will occupy within a row, all adding up to 12 or a 
+    multiple thereof
+
+    <div class="row">
+        <div class="col-sm-5"> There are another 7 columns left. <div class="col-sm-7">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm"> <div class="col-sm"> <div class="col-sm">  In here I didn't specify the number of columns taken by every
+        div, but Bootstrap it's gonna take charge of that putting every item side by side, giving them the same space 
+    </div>
+
+    <div class="row">
+        <div class="col-sm"> <div class="col-sm-6"> <div class="col-sm">  If I specify the number of columns of just one, for example,
+        Bootstrap will give it the number of columns but, is gonna share the amount left equally to the other both
+    </div>
+
+    * Look for Bootstrap Grid Details Chart *
+
+    Bootstrap also has the 'Order Hyphen classes' wich allow you to reorder the content of the screen,
+    for example: <div class="col-sm-5 order-sm-last"> <div class="col-sm-7 order-sm-first">
+    But, also can be done wit numbers such as: <div class="col-sm-7 order-8-first"></div> from 1 to 12
+
+
+* Vertical Alignment
+
+        As Bootstrap use the CSS Flexbox to implement its grid system, it inherits its hablity to Vertical Alignment
+        If I want to center all the contents of the row div, I can make it as follows:
+        <div class="row align-items-center">
+
+
+* Horizontal Alignment
+
+        For example, with this:
+        <div class="row justify-content-center">
+            <div class="col-3"> <div class="col-auto"> <div class="col-3">
+        </div>
+
+        -> AUTO: This means that the size of the column that this div occupies will be set by the content that
+        is enclosed inside
